@@ -5,14 +5,15 @@ class InitMenu extends Menu {
     private Menu menu = new Menu();
 
     void initMenu() {
-
         int option;
+
         do {
             option = menu.takeOption();
             switch(option) {
                 case 1:
                     System.out.println("Wybrano opcję 1");
                     Zoo zoo = new Zoo();
+                    System.out.println(zoo.getAnimals());
                     String animalKey = getUserAnimal();
                     zoo.takeAnimal(animalKey);
                     break;
@@ -21,7 +22,6 @@ class InitMenu extends Menu {
                     break;
                 default:
                     System.out.println("Wybierz właściwą opcję");
-                    option = takeOption();
                     break;
             }
         } while (option != 9);

@@ -1,7 +1,9 @@
 package com.marcin.training;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 class Zoo {
@@ -10,6 +12,14 @@ class Zoo {
     private final static List<String> animals2 = Arrays.asList("lemming", "ostrich", "monkey", "peacock",
             "snake", "camel", "elephant", "giraffe", "rhino", "lion");
 
+    Map<String, String> animals = new HashMap<String, String>();
+
+    String test = animals.put("wąż", "snake");
+    String test2 = animals.put("struś", "ostrich");
+
+    public Map<String, String> getAnimals() {
+        return animals;
+    }
 
     void takeAnimal(String animalKey) {
 
