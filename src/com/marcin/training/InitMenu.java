@@ -13,9 +13,8 @@ class InitMenu extends Menu {
                 case 1:
                     System.out.println("Wybrano opcję 1");
                     Zoo zoo = new Zoo();
-                    System.out.println(zoo.getAnimals());
-                    String animalKey = getUserAnimal();
-                    zoo.takeAnimal(animalKey);
+                    String userAnimal = getUserAnimal();
+                    zoo.takeAnimal(userAnimal);
                     break;
                 case 9:
                     System.out.println("Program kończy pracę");

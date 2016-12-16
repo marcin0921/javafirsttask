@@ -1,38 +1,37 @@
 package com.marcin.training;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
 class Zoo {
 
+    private Map<String, String> animals = new HashMap<String, String>() {
+        {
+            put("Wąż", "Snake");
+            put("Struś", "Ostrich");
+            put("Małpa", "Monkey");
+            put("Paw", "Peacock");
+            put("Leming", "Lemming");
+            put("Wielbłąd", "Camel");
+            put("Słoń", "Elephant");
+            put("Żyrafa", "Giraffe");
+            put("Nosorożec", "Rhino");
+            put("Lew", "Lion");
+        }
+    };
 
-    private final static List<String> animals2 = Arrays.asList("lemming", "ostrich", "monkey", "peacock",
-            "snake", "camel", "elephant", "giraffe", "rhino", "lion");
 
-    Map<String, String> animals = new HashMap<String, String>();
+    void takeAnimal(String userAnimal) {
 
-    String test = animals.put("wąż", "snake");
-    String test2 = animals.put("struś", "ostrich");
+        String found = animals.get(userAnimal);
 
-    public Map<String, String> getAnimals() {
-        return animals;
-    }
-
-    void takeAnimal(String animalKey) {
-
-
-        if ( animals2.contains(animalKey) ) {
-            System.out.println("Tak! Znaleziono " + animalKey + ". Zapraszamy do odwiedzin ZOO.");
-
-        } else {
+        if ( found == null ) {
             System.out.println("Niestety, nie mamy takiego zwierzaka w ZOO :-(");
-
+        } else {
+            System.out.println("Tak! Znaleziono " + userAnimal + ". Angielska nazwa: " + found);
         }
     }
-
 
 
 }

@@ -39,6 +39,8 @@ class Menu {
         Scanner sc = new Scanner(System.in);
         String animal = sc.nextLine();
 
+        animal = animal.substring(0, 1).toUpperCase() + animal.substring(1);
+
         if (isInteger(animal)) {
             do {
                 System.out.println("Błąd! Podałęś liczbę zamiast nazwy zwięrzęcia \nSpróbuj ponownie: ");
